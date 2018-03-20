@@ -22,9 +22,11 @@ function currentLine(katzDeliLine) {
   }
   else {
     for (var i = 0; i < katzDeliLine.length; i++) {
-      var line = []
-      line += "The line is currently: " +(i+1)+ ". " +katzDeliLine[i]+ ",";
-      return line;
+      var line = [];
+      if (i === katzDeliLine.length-1) {
+        line += "The line is currently: " +(i+1)+ ". " +katzDeliLine[i]+ ",";
+        return line;
+      }
     }
   }
 }
